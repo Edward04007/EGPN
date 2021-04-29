@@ -1,0 +1,82 @@
+.campo-feed{
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    padding: 0.5em;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    article{
+        width: 40%;
+        height: 60%;
+        display: flex;
+        padding: 0.5em;
+        overflow: auto;
+        border-radius: 0.7em;
+        flex-direction: column;
+        background-color: $blue;
+        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+
+    }
+}
+.rolagem{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.rolagem::-webkit-scrollbar-track-piece {
+    background-color: $blue;
+}
+.rolagem::-webkit-scrollbar{
+    width: 0.2em;
+    height: 0.2em;
+}
+.rolagem::-webkit-scrollbar-thumb {
+    border-radius: 0.2em;
+    background-color: $ligthBlue ;
+}
+.div-titulo{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    p{
+        color: $white;
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: bolder;
+        font-family: $Roboto;
+    }
+    span{
+        color: $grey;
+        font-size: 0.8em;
+        margin-left: 7em;
+    }
+}
+.material-icons{
+    font-family: 'Material Icons';
+}
+.div-campos{
+    width: 55%;
+    height: 12%;
+    display: flex;
+    margin: 0.2em;
+    align-items: center;
+    border-radius: 0.4em;
+    justify-content: center;
+    background-color: $ligthBlue;
+    p{
+        color: $white;
+        font-size: 1.6rem;
+        font-style: normal;
+        text-align: center;
+        white-space: nowrap;
+        font-family: $Roboto;
+    }
+}
