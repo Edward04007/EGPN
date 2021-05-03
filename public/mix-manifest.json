@@ -1,5 +1,9 @@
 {
+    "/js/pop-up.js": "/js/pop-up.js",
+    "/js/form-edite.js": "/js/form-edite.js",
     "/css/index.css": "/css/index.css",
     "/css/feed.css": "/css/feed.css",
-    "/css/template.css": "/css/template.css"
+    "/css/template.css": "/css/template.css",
+    "/css/painel.css": "/css/painel.css",
+    "/css/criarQuestoes.css": "/css/criarQuestoes.css"
 }

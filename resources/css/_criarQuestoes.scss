@@ -1,0 +1,133 @@
+.campo-painel{
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    padding: 0.5em;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    article{
+        width: 80%;
+        height: 70%;
+        display: flex;
+        padding: 0.5em;
+        overflow: auto;
+        border-radius: 0.7em;
+        flex-direction: column;
+        background-color: $blue;
+        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+        -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+
+    }
+}
+.rolagem{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.rolagem::-webkit-scrollbar-track-piece {
+    background-color: $blue;
+}
+.rolagem::-webkit-scrollbar{
+    width: 0.2em;
+    height: 0.2em;
+}
+.rolagem::-webkit-scrollbar-thumb {
+    border-radius: 0.2em;
+    background-color: $ligthBlue ;
+}
+.div-titulo{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    p{
+        color: $white;
+        cursor: default;
+        font-size: 1.6rem;
+        font-weight: bolder;
+        font-family: $Roboto;
+    }
+}
+.div-campo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        border-radius: 0.7em;
+        flex-direction: column;
+        justify-content: center;
+        .textarea{
+            width: 80%;
+            height: 20em;
+            white-space: pre-wrap;
+        }
+        input{
+            width: 80%;
+            color: $white;
+            height: 1.7em;
+            padding: 0.5em;
+            font-size: 1rem;
+            margin-bottom: 0.5em;
+            border-radius: 0.7em;
+            font-family: $Roboto;
+            background-color: $ligthBlue;
+        }
+        input::placeholder{
+            color: $white;
+        }
+        div{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            button{
+                width: 5em;
+                height: 2em;
+                color: $white;
+                cursor: pointer;
+                font-size: 1rem;
+                font-weight: bolder;
+                border-radius: 0.7em;
+                font-family: $Roboto;
+                background-color: $green;
+            }
+            button:hover{
+                box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+                -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+            }
+            a{
+                width: 5em;
+                height: 2em;
+                color: $white;
+                display: flex;
+                font-size: 1rem;
+                cursor: pointer;
+                align-items: center;
+                border-radius: 0.7em;
+                background-color: $red;
+                justify-content: center;
+                span{
+                    font-size: 1rem;
+                    padding-left: 0.3em;
+                    font-weight: bolder;
+                    font-family: $Roboto;
+                }
+            }
+        }
+    }
+}
+

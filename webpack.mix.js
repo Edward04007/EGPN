@@ -12,3 +12,19 @@ const mix = require('laravel-mix');
     'resources/css/main3.css',
     'public/css/template.css'
 )
+.styles(
+    'resources/css/main4.css',
+    'public/css/painel.css'
+)
+.styles(
+    'resources/css/main5.css',
+    'public/css/criarQuestoes.css'
+)
+.js(
+    'resources/js/pop-up.js',
+    'public/js/pop-up.js'
+)
+.js(
+    'resources/js/form-edite.js',
+    'public/js/form-edite.js'
+)

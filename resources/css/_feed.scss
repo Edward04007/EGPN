@@ -44,26 +44,26 @@
     width: 100%;
     height: 10%;
     display: flex;
+    position: relative;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     p{
         color: $white;
+        cursor: default;
         font-size: 1.6rem;
-        text-align: center;
         font-weight: bolder;
         font-family: $Roboto;
     }
     span{
+        right: 0;
         color: $grey;
+        cursor: pointer;
         font-size: 0.8em;
-        margin-left: 7em;
+        position: absolute;
     }
 }
-.material-icons{
-    font-family: 'Material Icons';
-}
-.div-campos{
-    width: 55%;
+.div-campo{
+    width: 10em;
     height: 12%;
     display: flex;
     margin: 0.2em;
@@ -71,12 +71,91 @@
     border-radius: 0.4em;
     justify-content: center;
     background-color: $ligthBlue;
-    p{
+    a{
         color: $white;
+        cursor: pointer;
         font-size: 1.6rem;
         font-style: normal;
         text-align: center;
         white-space: nowrap;
         font-family: $Roboto;
     }
+}
+.pop-up{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(36, 35, 35, 0.26);
+    form{
+        width: 40%;
+        height: 40%;
+        display: flex;
+        padding: 0.5em;
+        position: relative;
+        align-items: center;
+        border-radius: 0.7em;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $ligthBlue;
+        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+        span{
+            top: 3%;
+            right: 3%;
+            color: $red;
+            font-size: 1rem;
+            cursor: pointer;
+            position: absolute;
+            border-radius: 0.7em;
+        }
+        span:hover{
+            box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+        }
+        legend{
+            color: $white;
+            cursor: default;
+            font-size: 1.2rem;
+            margin-bottom: 1em;
+            white-space: nowrap;
+            font-family: $Alfa-Slad-One;
+        }
+        input{
+            width: 80%;
+            height: 1.7em;
+            padding: 0.5em;
+            font-size: 1rem;
+            color: #021526;
+            margin-bottom: 0.5em;
+            border-radius: 0.7em;
+            font-family: $Roboto;
+            background-color: $WhiteGrey;
+        }
+        input:focus{
+            border: solid 3px $green;
+        }
+        button{
+            width: 5em;
+            height: 2em;
+            color: $white;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bolder;
+            border-radius: 0.7em;
+            font-family: $Roboto;
+            background-color: $green;
+            text-shadow: -6px 9px 16px -4px rgba(34, 35, 38, 0.31);
+        }
+        button:hover{
+            box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+            -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+        }
+    }
+
+}
+
+.mostrar{
+    display: flex;
 }

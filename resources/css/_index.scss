@@ -13,10 +13,12 @@
         flex-direction: column;
         justify-content: center;
         background-color: $blue;
-        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+        -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
     }
     legend{
         color: $white;
+        cursor: default;
         font-size: 1.2rem;
         margin-bottom: 1em;
         font-family: $Alfa-Slad-One;
@@ -24,15 +26,20 @@
     input{
         width: 80%;
         height: 1.7em;
-        padding: 0.5em;
+        padding-left: 0.5em;
         font-size: 1rem;
         color: #021526;
         margin-bottom: 0.5em;
         border-radius: 0.7em;
         font-family: $Roboto;
+        background-color: $WhiteGrey;
     }
     input:focus{
         border: solid 3px $green;
+    }
+    input::placeholder{
+        padding-left: 0.3em;
+        font-family: $Roboto;
     }
     button{
         width: 5em;
@@ -47,10 +54,8 @@
         text-shadow: -6px 9px 16px -4px rgba(34, 35, 38, 0.31);
     }
     button:hover{
-        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+        -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
     }
 }
-::placeholder{
-    padding: 0.5em;
-    font-family: $Roboto;
-}
+

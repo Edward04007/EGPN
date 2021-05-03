@@ -10,11 +10,4 @@ class Controller_Index extends Controller
 
         return view('pages/index');
     }
-
-    public function telaPrincipal(){
-
-        return view('pages/telaPrincipal');
-    }
-
-
 }
