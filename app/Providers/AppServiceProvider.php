@@ -13,11 +13,9 @@ class AppServiceProvider extends ServiceProvider{
      */
     public function boot(UrlGenerator $url)
     {
-            if (env('APP_ENV') == 'local') {
-                  $url->forceScheme('http');
-            }else{
-                $url->forceScheme('http');
-            }
+
+        $url->forceScheme('httpS');
+
      }
     /**
      * Register any application services.
