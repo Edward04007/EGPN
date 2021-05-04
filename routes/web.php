@@ -7,8 +7,11 @@ use App\Http\Controllers\Controller_Painel;
 
 /* Rotas para a página inicial */
 Route::get("/",[Controller_Index::class, 'index'])->name('inicio');
+Route::post("/auth",[Controller_Index::class, 'logar'])->name('logar');
 
-/* Rota para o feed */
+Route::middleware('session')->group(function(){
+
+    /* Rota para o feed */
 Route::get("/feed",[Controller_Feed::class, 'feed'])->name('feed');
 
 /* Rotas para o painel */
@@ -23,4 +26,4 @@ Route::get('/painel/criar/questao',[Controller_Painel::class, 'CreateQuestion'])
 Route::post('/painel/criar/questao',[Controller_Painel::class, 'CreateQuestion'])->name('salvarQuestao');
 
 Route::get('/painel/visualizar/prova', [Controller_Painel::class, 'ViewProva'])->name('VisualizarProva');
-
+});

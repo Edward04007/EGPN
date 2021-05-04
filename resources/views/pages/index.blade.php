@@ -4,7 +4,7 @@
 @endpush
 @section('content')
     <section class="form">
-        <form method="POST" action="">
+        <form method="POST" action="{{Route('logar')}}">
             <legend>ENTRAR</legend>
             @csrf
             <input type="text" name="username" placeholder="Usuário" id="user">

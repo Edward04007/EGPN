@@ -38,10 +38,12 @@
         <div class="content">
             <header class="header">
                 <span>EGPN</span>
+                @if(session('UsuarioLogado') == true)
                     <figure>
-                        <img/>
-                        <figcaption>Jonas Rodrigues</figcaption>
+                        <img src="{{session('foto')}}"/>
+                        <figcaption>{{session('UsuarioLogado')}}</figcaption>
                     </figure>
+                @endif
             </header>
             @yield('content')
         </div>
