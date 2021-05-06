@@ -8,15 +8,15 @@
     <meta name="description" content="Teste seu conhecimento de forma rápida com o EGPN"/>
     <meta name="author" content="Éverton - Ed"/>
     <meta name="copyright" content="© 2021 EGPNT"/>
-    <meta name="url" content="link do site"/>
+    <meta name="url" content="https://ed-egpn-jonas.herokuapp.com"/>
     {{-- Facebook --}}
     <meta property="og:image" content="https://i.imgur.com/bGsKWUm.png"/>
     <meta property="og:description" content="Teste seu conhecimento de forma rápida com o EGPN"/>
-    <meta property="og: url" content="link do site"/>
+    <meta property="og: url" content="https://ed-egpn-jonas.herokuapp.com"/>
     {{-- Twitter --}}
     <meta name="twitter:image" content="https://i.imgur.com/bGsKWUm.png"/>
     <meta name="twitter:description" content="Teste seu conhecimento de forma rápida com o EGPN"/>
-    <meta name="twitter:url" content="link do site"/>
+    <meta name="twitter:url" content="https://ed-egpn-jonas.herokuapp.com"/>
     <title>@yield('title') EGPN</title>
    {{--  <link rel='manifest' href='{{asset('ed-manifest.json')}}'> --}}
     <link rel="icon" sizes="144x144" href="https://i.imgur.com/p9uL54S.png"/>

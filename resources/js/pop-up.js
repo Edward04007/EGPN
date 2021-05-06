@@ -6,7 +6,7 @@ const inputPhoto = document.querySelector('#hidden0')
 
 document.querySelector('.prof').addEventListener('click', () =>{
     input.name = "userProf"
-    inputPhoto.type = "text"
+    inputPhoto.type = "url"
     inputPass.type = "password"
     pop.classList.add('mostrar')
     legend.innerHTML = "Adicionar Professor"

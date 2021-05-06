@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Model_Disciplina;
 
 class Controller_Painel extends Controller
 {
-    public function painel(){
+    public function painel_disc($id){
 
-        return view('pages/painel');
+        $disc = Model_Disciplina::where('pk_id', $id)->get();
+
+      
+        return view('pages/painel_disc', compact('disc'));
     }
 
     public function delete(){
@@ -27,5 +31,10 @@ class Controller_Painel extends Controller
 
     public function ViewProva(){
 
+        return view('pages/viewAssunt');
+    }
+
+    public function painel_prof(){
+        return view('pages/painel_prof');
     }
 }

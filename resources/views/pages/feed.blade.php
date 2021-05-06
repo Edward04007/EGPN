@@ -13,9 +13,13 @@
                 <span class="fas fa-ellipsis-v dis"></span>
             </div>
             <div class="rolagem">
-                <div class="div-campo">
-                    <a href="{{Route('painel', 'id')}}">Laboratório Web</a>
-                </div>
+                @forelse ( $disc as $discs )
+                    <div class="div-campo">
+                        <a href="{{Route('painelDisciplina', trim($discs->pk_id))}}">{{trim($discs->disciplina)}}</a>
+                    </div>
+                @empty
+                    <p>Não tem nada</p>
+                @endforelse
             </div>
         </article>
             <article >
@@ -25,16 +29,16 @@
                 </div>
                 <div class="rolagem">
                     <div class="div-campo">
-                        <a>Israel</a>
+                        <a href="{{Route('painelProfessor', 'id')}}">Israel</a>
                     </div>
                 </div>
             </article>
             <div class="pop-up">
-                <form id="form" method="POST" action="">
+                <form id="form" method="POST" action="{{Route('CriarDisciplina')}}">
                     <span class="fas fa-times-circle close"></span>
                     <legend id="legend"></legend>
                     @csrf
-                    <input type="text" id="hidden0" name="userFoto" placeholder="Link da imagem">
+                    <input type="url" id="hidden0" name="userFoto" placeholder="Link da imagem">
                     <input type="text" id="input" name="" placeholder="">
                     <input type="password" id="hidden1" name="userSenha" placeholder="Senha">
                     <button type="submit">Adicionar</button>

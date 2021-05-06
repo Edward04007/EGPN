@@ -28,3 +28,7 @@ const mix = require('laravel-mix');
     'resources/js/form-edite.js',
     'public/js/form-edite.js'
 )
+.js(
+    'resources/js/form-edite2.js',
+    'public/js/form-edite2.js'
+)

@@ -13,10 +13,12 @@
             </div>
             <div class="rolagem">
                 <div class="div-campo">
-                    <form>
-                        <input id="input" type="text" value="Laboratório Web">
-                        <button class="button" type="submit">Salvar</button>
-                    </form>
+                    @foreach ( $disc as $discs )
+                        <form>
+                            <input id="input" type="text" value={{$discs->disciplina}}>
+                            <button class="button" type="submit">Salvar</button>
+                        </form>
+                    @endforeach
                 </div>
                 <div class="div-campo">
                     <p class="CD">Apagar</p>

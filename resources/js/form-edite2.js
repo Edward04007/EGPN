@@ -3,20 +3,15 @@ const cp = document.querySelector('.CP')
 const del = document.querySelector('.delete')
 const close = document.querySelector('.close')
 const input = document.querySelector('#input')
+const input2 = document.querySelector('#input2')
+const input3 = document.querySelector('#input3')
 const close1 = document.querySelector('.close1')
 const button = document.querySelector('.button')
-const create = document.querySelector('.create')
+const button2 = document.querySelector('.button2')
+const button3 = document.querySelector('.button3')
 
 cd.addEventListener('click', ()=>{
     del.classList.add('mostrar-flex')
-})
-
-cp.addEventListener('click', ()=>{
-    create.classList.add('mostrar-flex')
-})
-
-close.addEventListener('click', ()=>{
-    create.classList.remove('mostrar-flex')
 })
 
 close1.addEventListener('click', ()=>{
@@ -34,3 +29,25 @@ input.addEventListener('blur', () =>{
     button.classList.remove('mostrar')
 
 })
+
+input2.addEventListener('focus', () =>{
+
+    button2.classList.add('mostrar')
+
+})
+input2.addEventListener('blur', () =>{
+
+    button2.classList.remove('mostrar')
+
+})
+input3.addEventListener('focus', () =>{
+
+    button3.classList.add('mostrar')
+
+})
+input3.addEventListener('blur', () =>{
+
+    button3.classList.remove('mostrar')
+
+})
+
