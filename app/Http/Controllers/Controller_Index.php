@@ -9,7 +9,13 @@ class Controller_Index extends Controller
 {
     public function index(){
 
-        return view('pages/index');
+        if(session()->has('UsuarioLogado')){
+
+            return redirect()->route('feed');
+        }else{
+            return view('pages/index');
+        }
+
     }
 
     public function logar(Request $request){
@@ -48,5 +54,11 @@ class Controller_Index extends Controller
 
             return back();
        }
+    }
+
+    public function deslogar(){
+
+        session()->pull('UsuarioLogado');
+        return view('pages/index');
     }
 }

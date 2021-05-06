@@ -23,10 +23,15 @@
         align-items: center;
         flex-direction: row;
         justify-content: flex-end;
-        img{
+        a{
             width: 1.5em;
             height: 1.5em;
             border-radius: 50%;
+            img{
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+            }
         }
         figcaption{
             color: $white;

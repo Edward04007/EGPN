@@ -40,7 +40,7 @@
                 <span>EGPN</span>
                 @if(session('UsuarioLogado') == true)
                     <figure>
-                        <img src="{{session('foto')}}"/>
+                        <a href="{{Route('deslogar')}}"><img src="{{session('foto')}}"/></a>
                         <figcaption>{{session('UsuarioLogado')}}</figcaption>
                     </figure>
                 @endif

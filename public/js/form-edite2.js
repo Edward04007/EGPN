@@ -1,1 +1,42 @@
-(()=>{var e=document.querySelector(".CD"),t=(document.querySelector(".CP"),document.querySelector(".delete")),r=(document.querySelector(".close"),document.querySelector("#input")),o=document.querySelector("#input2"),n=document.querySelector("#input3"),c=document.querySelector(".close1"),s=document.querySelector(".button"),u=document.querySelector(".button2"),d=document.querySelector(".button3");e.addEventListener("click",(function(){t.classList.add("mostrar-flex")})),c.addEventListener("click",(function(){t.classList.remove("mostrar-flex")})),r.addEventListener("focus",(function(){s.classList.add("mostrar")})),r.addEventListener("blur",(function(){s.classList.remove("mostrar")})),o.addEventListener("focus",(function(){u.classList.add("mostrar")})),o.addEventListener("blur",(function(){u.classList.remove("mostrar")})),n.addEventListener("focus",(function(){d.classList.add("mostrar")})),n.addEventListener("blur",(function(){d.classList.remove("mostrar")}))})();
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!*************************************!*\
+  !*** ./resources/js/form-edite2.js ***!
+  \*************************************/
+var cd = document.querySelector('.CD');
+var cp = document.querySelector('.CP');
+var del = document.querySelector('.delete');
+var close = document.querySelector('.close');
+var input = document.querySelector('#input');
+var input2 = document.querySelector('#input2');
+var input3 = document.querySelector('#input3');
+var close1 = document.querySelector('.close1');
+var button = document.querySelector('.button');
+var button2 = document.querySelector('.button2');
+var button3 = document.querySelector('.button3');
+cd.addEventListener('click', function () {
+  del.classList.add('mostrar-flex');
+});
+close1.addEventListener('click', function () {
+  del.classList.remove('mostrar-flex');
+});
+input.addEventListener('focus', function () {
+  button.classList.add('mostrar');
+});
+input.addEventListener('blur', function () {
+  button.classList.remove('mostrar');
+});
+input2.addEventListener('focus', function () {
+  button2.classList.add('mostrar');
+});
+input2.addEventListener('blur', function () {
+  button2.classList.remove('mostrar');
+});
+input3.addEventListener('focus', function () {
+  button3.classList.add('mostrar');
+});
+input3.addEventListener('blur', function () {
+  button3.classList.remove('mostrar');
+});
+/******/ })()
+;

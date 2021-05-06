@@ -31,6 +31,11 @@ input.addEventListener('focus', () =>{
 
 input.addEventListener('blur', () =>{
 
-    button.classList.remove('mostrar')
+    setTimeout(timeRemove, 5000)
 
 })
+
+function timeRemove(){
+
+    button.classList.remove('mostrar')
+}

@@ -11,9 +11,16 @@ class Controller_Painel extends Controller
 
         $disc = Model_Disciplina::where('pk_id', $id)->get();
 
-      
+
         return view('pages/painel_disc', compact('disc'));
     }
+
+    public function RenomeDisci( Request $resuest, $id){
+
+        Model_Disciplina::where('pk_id', $id)->update(['disciplina' => $resuest-> renome]);
+        return back();
+    }
+
 
     public function delete(){
 

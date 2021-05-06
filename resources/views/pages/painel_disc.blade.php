@@ -14,8 +14,10 @@
             <div class="rolagem">
                 <div class="div-campo">
                     @foreach ( $disc as $discs )
-                        <form>
-                            <input id="input" type="text" value={{$discs->disciplina}}>
+                        <form method="POST" action="{{Route('RenomearDisciplina', trim($discs->pk_id))}}">
+                            @method('put')
+                            @csrf
+                            <input name="renome" id="input" value='{{trim($discs->disciplina)}}'>
                             <button class="button" type="submit">Salvar</button>
                         </form>
                     @endforeach

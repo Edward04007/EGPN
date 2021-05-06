@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller_Painel;
 /* Rotas para a página inicial */
 Route::get("/",[Controller_Index::class, 'index'])->name('inicio');
 Route::post("/auth",[Controller_Index::class, 'logar'])->name('logar');
+Route::get("/sair",[Controller_Index::class, 'deslogar'])->name('deslogar');
 
 Route::middleware('session')->group(function(){
 
@@ -28,8 +29,12 @@ Route::delete("/painel/delelar/disciplina/{id}", [Controller_Painel::class,'dele
 /* Rota para criar assunto para disciplina */
 Route::post('/painel/criar/conteudo', [Controller_Painel::class, 'ContentProva'])->name('ConteudoProva');
 
+/* Rota para atualizar  renomar disciplina */
+Route::put('/painel/renomear/disciplina/{id}', [Controller_Painel::class, 'RenomeDisci'])->name('RenomearDisciplina');
+
 /* Rota para criar questão para o assunto da disciplina */
 Route::get('/painel/criar/questao',[Controller_Painel::class, 'CreateQuestion'])->name('questao');
+
 /* Rota para criar questão para o assunto da disciplina */
 Route::post('/painel/criar/questao',[Controller_Painel::class, 'CreateQuestion'])->name('salvarQuestao');
 
