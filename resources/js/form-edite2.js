@@ -26,7 +26,7 @@ input.addEventListener('focus', () =>{
 
 input.addEventListener('blur', () =>{
 
-    button.classList.remove('mostrar')
+    setTimeout(timeRemove, 5000)
 
 })
 
@@ -37,7 +37,7 @@ input2.addEventListener('focus', () =>{
 })
 input2.addEventListener('blur', () =>{
 
-    button2.classList.remove('mostrar')
+    setTimeout(timeRemove2, 5000)
 
 })
 input3.addEventListener('focus', () =>{
@@ -47,7 +47,19 @@ input3.addEventListener('focus', () =>{
 })
 input3.addEventListener('blur', () =>{
 
-    button3.classList.remove('mostrar')
+    setTimeout(timeRemove3, 5000)
 
 })
 
+function timeRemove(){
+
+    button.classList.remove('mostrar')
+}
+function timeRemove2(){
+
+    button2.classList.remove('mostrar')
+}
+function timeRemove3(){
+
+    button3.classList.remove('mostrar')
+}

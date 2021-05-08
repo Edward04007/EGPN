@@ -57,7 +57,22 @@ name('VisualizarAssunto');
 Route::get('/painel/visualizar/questoes/{id}', [Controller_Painel::class, 'ViewQuestoes'])->
 name('VisualizarQuestoes');
 
+
+
+
 /* Rotas para o painel professor */
 Route::get("/painel/professor/{id}",[Controller_Painel::class, 'PainelProfessor'])->
 name('painelProfessor');
+
+Route::put('/painel/atualizar/foto/{id}', [Controller_Painel::class, 'AtualizarFoto'])->
+name('AtualizarFoto');
+
+Route::put('/painel/atualizar/nome/{id}', [Controller_Painel::class, 'RenomearProfessor'])->
+name('RenomearProfessor');
+
+Route::put('/painel/atualizar/senhar/{id}', [Controller_Painel::class, 'AtualizarSenha'])->
+name('AtualizarSenha');
+
+Route::delete('/painel/deletar/professor/{id}', [Controller_Painel::class, 'DeletarProfessor'])->
+name('deletarProfessor');
 });

@@ -14,25 +14,33 @@
             <div class="rolagem">
                 <div class="div-campo">
                     @foreach ( $prof as $profs)
-                    <form method="POST" action="{{Route('RenomearDisciplina', trim($profs->pk_id))}}">
+                        <form method="POST" action="{{Route('AtualizarFoto', trim($profs->pk_id))}}">
                         @method('put')
                         @csrf
-                        <input name="renome" id="input" value='{{trim($profs->nome_usuario)}}'>
+                        <input type="url" name="userFoto" id="input" placeholder='{{trim($profs->foto_usuario)}}'>
                         <button class="button" type="submit">Salvar</button>
                     </form>
-                @endforeach
+                    @endforeach
                 </div>
                 <div class="div-campo">
-                    <form>
-                        <input id="input2" type="text" value="Israel Furtado">
+                    @foreach ( $prof as $profs)
+                    <form method="POST" action="{{Route('RenomearProfessor', trim($profs->pk_id))}}">
+                        @method('put')
+                        @csrf
+                        <input type="text" name="userProf" id="input2" value='{{trim($profs->nome_usuario)}}'>
                         <button class="button2" type="submit">Salvar</button>
                     </form>
+                    @endforeach
                 </div>
                 <div class="div-campo">
-                    <form>
-                        <input id="input3" type="new-password" placeholder="Nova senha">
+                    @foreach ( $prof as $profs)
+                    <form method="POST" action="{{Route('AtualizarSenha',trim($profs->pk_id))}}">
+                        @method('put')
+                        @csrf
+                        <input id="input3" name="userSenha" type="password" placeholder="Nova senha">
                         <button class="button3" type="submit">Salvar</button>
                     </form>
+                    @endforeach
                 </div>
                 <div class="div-campo">
                     <p class="CD">Apagar</p>
@@ -41,15 +49,17 @@
             <a href="{{Route('inicio')}}" class="fas fa-chevron-circle-left back"><span>Voltar</span></a>
         </article>
         <div class="pop-up delete">
-            <form method="POST" action="{{Route('deletarDisciplina', 'id')}}">
+            @foreach ( $prof as $profs)
+            <form method="POST" action="{{Route('deletarProfessor', trim($profs->pk_id))}}">
                 @method('delete')
                 @csrf
-                <legend>Apagar Israel?</legend>
+                <legend>Apagar {{trim($profs->nome_usuario)}}?</legend>
                 <div>
                     <span class="close1">Não!</span>
                     <button type="submit">Sim!</button>
                 </div>
             </form>
+            @endforeach
         </div>
     </section>
 @endsection

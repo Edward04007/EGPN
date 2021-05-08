@@ -24,19 +24,31 @@ input.addEventListener('focus', function () {
   button.classList.add('mostrar');
 });
 input.addEventListener('blur', function () {
-  button.classList.remove('mostrar');
+  setTimeout(timeRemove, 5000);
 });
 input2.addEventListener('focus', function () {
   button2.classList.add('mostrar');
 });
 input2.addEventListener('blur', function () {
-  button2.classList.remove('mostrar');
+  setTimeout(timeRemove2, 5000);
 });
 input3.addEventListener('focus', function () {
   button3.classList.add('mostrar');
 });
 input3.addEventListener('blur', function () {
-  button3.classList.remove('mostrar');
+  setTimeout(timeRemove3, 5000);
 });
+
+function timeRemove() {
+  button.classList.remove('mostrar');
+}
+
+function timeRemove2() {
+  button2.classList.remove('mostrar');
+}
+
+function timeRemove3() {
+  button3.classList.remove('mostrar');
+}
 /******/ })()
 ;
