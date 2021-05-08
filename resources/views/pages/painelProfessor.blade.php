@@ -34,7 +34,7 @@
                     <p class="CD">Apagar</p>
                 </div>
             </div>
-            <a href="{{Route('feed')}}" class="fas fa-chevron-circle-left back"><span>Voltar</span></a>
+            <a href="{{Route('inicio')}}" class="fas fa-chevron-circle-left back"><span>Voltar</span></a>
         </article>
         <div class="pop-up delete">
             <form method="POST" action="{{Route('deletarDisciplina', 'id')}}">

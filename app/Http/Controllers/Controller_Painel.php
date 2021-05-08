@@ -7,41 +7,46 @@ use App\Models\Model_Disciplina;
 
 class Controller_Painel extends Controller
 {
-    public function painel_disc($id){
+    public function PainelDisciplina($id){
 
         $disc = Model_Disciplina::where('pk_id', $id)->get();
 
-
-        return view('pages/painel_disc', compact('disc'));
+        return view('pages/painelDisciplina', compact('disc'));
     }
 
-    public function RenomeDisci( Request $resuest, $id){
+    public function RenomearDisciplina( Request $resuest, $id){
 
-        Model_Disciplina::where('pk_id', $id)->update(['disciplina' => $resuest-> renome]);
+        Model_Disciplina::where('pk_id', $id)->
+        update(['disciplina' => $resuest-> renome]);
         return back();
     }
 
 
-    public function delete(){
+    public function PeletarDisciplina(){
 
     }
 
-    public function ContentProva(){
+    public function CriarConteudo(){
 
         return redirect()->route('questao');
     }
 
-    public function CreateQuestion(){
-        return view('pages/CriarQuestoes');
+    public function CriarQuestoes(){
+        return view('pages/criarQuestoes');
     }
 
 
-    public function ViewProva(){
+    public function ViewAssunto(){
 
         return view('pages/viewAssunt');
     }
 
-    public function painel_prof(){
-        return view('pages/painel_prof');
+    public function ViewQuestoes(){
+
+        return view('pages/viewQuestoes');
+    }
+
+    public function PainelProfessor(){
+        return view('pages/painelProfessor');
     }
 }

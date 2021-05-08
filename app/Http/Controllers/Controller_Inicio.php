@@ -5,18 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Model_Disciplina;
 
-class Controller_Feed extends Controller
+class Controller_Inicio extends Controller
 {
-    public function feed(){
+    public function inicio(){
 
         $disc = Model_Disciplina::all();
 
-        return view('pages/feed', compact('disc'));
+        return view('pages/inicio', compact('disc'));
     }
 
     public function CreateDisci(Request $request){
         $disc = Model_Disciplina::create(['disciplina' => trim($request->disc)]);
 
-        return redirect()->route('feed');
+        return redirect()->route('inicio');
    }
 }

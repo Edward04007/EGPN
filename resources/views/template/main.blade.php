@@ -43,6 +43,8 @@
                         <a href="{{Route('deslogar')}}"><img src="{{session('foto')}}"/></a>
                         <figcaption>{{session('UsuarioLogado')}}</figcaption>
                     </figure>
+                @else
+                    <p>Excelente Gerenciador de Provas e Notas</p>
                 @endif
             </header>
             @yield('content')

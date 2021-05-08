@@ -11,7 +11,7 @@ class Controller_Index extends Controller
 
         if(session()->has('UsuarioLogado')){
 
-            return redirect()->route('feed');
+            return redirect()->route('inicio');
         }else{
             return view('pages/index');
         }
@@ -41,7 +41,7 @@ class Controller_Index extends Controller
                 $request->session()->put('foto', trim($InforUser->foto_usuario));
                 $request->session()->put('UsuarioLogado', trim($InforUser->nome_usuario));
 
-                return redirect()->route('feed');
+                return redirect()->route('inicio');
             }else{
 
                 return back();

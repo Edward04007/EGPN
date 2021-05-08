@@ -1,4 +1,4 @@
-@extends("../template/main")
+@extends("template/main")
 @push("css")
 <link rel="stylesheet" href="{{mix('css/criarQuestoes.css')}}">
 @endpush
@@ -19,7 +19,7 @@
                         <input type="text" placeholder="alternativa E" name="alternativa_e">
                         <input type="text" placeholder="Gabarito" name="alternativa_d">
                         <div>
-                            <a href="{{Route('painel','id')}}" class="fas fa-chevron-circle-left"><span>Voltar</span></a>
+                            <a href="{{Route('painelDisciplina','id')}}" class="fas fa-chevron-circle-left"><span>Voltar</span></a>
                             <button class="button" type="submit">Salvar</button>
                         </div>
                     </form>

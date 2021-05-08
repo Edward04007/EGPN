@@ -14,13 +14,7 @@
             </div>
             <div class="rolagem">
                 <div class="div-campo">
-                    <a href="{{Route('painelProfessor', 'id')}}">Laboratório Web</a>
-                </div>
-                <div class="div-campo">
-                    <a href="{{Route('painelProfessor', 'id')}}">Laboratório Hardware</a>
-                </div>
-                <div class="div-campo">
-                    <a href="{{Route('painelProfessor', 'id')}}">Laboratório Software</a>
+                    <a href="{{Route('VisualizarQuestoes', 'id')}}">POO</a>
                 </div>
             </div>
         </article>

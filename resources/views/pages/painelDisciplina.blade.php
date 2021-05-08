@@ -29,13 +29,13 @@
                     <p class="CP">Criar prova</p>
                 </div>
                 <div class="div-campo">
-                    <a href="{{Route('VisualizarProva')}}">Visualizar prova</a>
+                    <a href="{{Route('VisualizarAssunto')}}">Visualizar prova</a>
                 </div>
             </div>
-            <a href="{{Route('feed')}}" class="fas fa-chevron-circle-left back"><span>Voltar</span></a>
+            <a href="{{Route('inicio')}}" class="fas fa-chevron-circle-left back"><span>Voltar</span></a>
         </article>
         <div class="pop-up create">
-            <form id="form" method="POST" action="{{Route('ConteudoProva')}}">
+            <form id="form" method="POST" action="{{Route('CriarConteudo')}}">
                 <span class="fas fa-times-circle close"></span>
                 @csrf
                 <legend id="legend">Assunto da prova</legend>
