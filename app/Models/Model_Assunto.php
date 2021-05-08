@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Model_Assunto extends Model
 {
     use HasFactory;
+
+
+    protected $table = 'TB_DISCIPLINAS';
+
+    protected $fillable = [
+        'pk_id',
+        'fk_disciplina',
+        'assunto',
+    ];
+
+   /* protected $hidden = [
+        '',
+    ]; */
+
+    protected $primaryKey = 'pk_id';
+    public $timestamps = false;
 }

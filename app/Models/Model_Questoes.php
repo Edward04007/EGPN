@@ -8,4 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class Model_Questoes extends Model
 {
     use HasFactory;
+
+    protected $table = 'TB_DISCIPLINAS';
+
+    protected $fillable = [
+        'pk_id',
+        'fk_assunto',
+        'questao',
+        'alternativa_a',
+        'alternativa_b',
+        'alternativa_c',
+        'alternativa_d',
+        'alternativa_e',
+        'gabarito'
+    ];
+
+   protected $hidden = [
+        'gabarito',
+    ];
+
+    protected $primaryKey = 'pk_id';
+    public $timestamps = false;
 }
