@@ -13,10 +13,14 @@
             </div>
             <div class="rolagem">
                 <div class="div-campo">
-                    <form>
-                        <input id="input" type="url" placeholder="foto de perfil">
+                    @foreach ( $prof as $profs)
+                    <form method="POST" action="{{Route('RenomearDisciplina', trim($profs->pk_id))}}">
+                        @method('put')
+                        @csrf
+                        <input name="renome" id="input" value='{{trim($profs->nome_usuario)}}'>
                         <button class="button" type="submit">Salvar</button>
                     </form>
+                @endforeach
                 </div>
                 <div class="div-campo">
                     <form>

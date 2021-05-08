@@ -18,7 +18,7 @@
                         <a href="{{Route('painelDisciplina', trim($discs->pk_id))}}">{{trim($discs->disciplina)}}</a>
                     </div>
                 @empty
-                    <p>Não tem nada</p>
+                    <p>Nenhuma disciplina cadastrada</p>
                 @endforelse
             </div>
         </article>
@@ -28,13 +28,17 @@
                     <span class="fas fa-ellipsis-v prof"></span>
                 </div>
                 <div class="rolagem">
+                    @forelse ( $prof as $profs )
                     <div class="div-campo">
-                        <a href="{{Route('painelProfessor', 'id')}}">Israel</a>
+                        <a href="{{Route('painelProfessor', trim($profs->pk_id))}}">{{trim($profs->nome_usuario)}}</a>
                     </div>
+                @empty
+                    <p>Nenhum professor(a) cadastrado</p>
+                @endforelse
                 </div>
             </article>
             <div class="pop-up">
-                <form id="form" method="POST" action="{{Route('CriarDisciplina')}}">
+                <form id="form" method="POST" action="{{Route('Adicionar')}}">
                     <span class="fas fa-times-circle close"></span>
                     <legend id="legend"></legend>
                     @csrf

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Model_Disciplina;
+use App\Models\Model_Usuario;
 
 class Controller_Painel extends Controller
 {
@@ -22,7 +23,7 @@ class Controller_Painel extends Controller
     }
 
 
-    public function PeletarDisciplina(){
+    public function DeletarDisciplina(){
 
     }
 
@@ -46,7 +47,12 @@ class Controller_Painel extends Controller
         return view('pages/viewQuestoes');
     }
 
-    public function PainelProfessor(){
-        return view('pages/painelProfessor');
+    public function PainelProfessor($id){
+        $prof = Model_Usuario::
+        select('nome_usuario','pk_id')->
+        where('pk_id', $id)->
+        get();
+
+        return view('pages/painelProfessor', compact('prof'));
     }
 }

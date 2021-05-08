@@ -24,5 +24,5 @@ class Model_Usuario extends Model
     ];
 
     protected $primaryKey = 'pk_id';
-    public $timestamps = true;
+    public $timestamps = false;
 }

@@ -15,12 +15,12 @@ name('deslogar');
 
 Route::middleware('session')->group(function(){
 
-/* Rota para o feed */
+/* Rota para o inicio */
 Route::get("/inicio",[Controller_Inicio::class, 'inicio'])->
 name('inicio');
 /* Rota para adicionar disciplina */
-Route::post('/inicio/criar/disciplina', [Controller_Feed::class, 'CreateDisci'])->
-name('CriarDisciplina');
+Route::post('/inicio/criar/disciplina', [Controller_Inicio::class, 'Adicionar'])->
+name('Adicionar');
 
 
 
