@@ -10,7 +10,7 @@ class Model_Assunto extends Model
     use HasFactory;
 
 
-    protected $table = 'TB_DISCIPLINAS';
+    protected $table = 'TB_ASSUNTO';
 
     protected $fillable = [
         'pk_id',

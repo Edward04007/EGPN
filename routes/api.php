@@ -2,18 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller_ConsumirQuesteos;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+/* Rotas para o painel disciplina */
+Route::get("d", [Controller_ConsumirQuesteos::class, 'Disciplina']);
+Route::get("a/{id}", [Controller_ConsumirQuesteos::class, 'Assunto']);
+Route::get("q/{id}", [Controller_ConsumirQuesteos::class, 'Questeos']);
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});

@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Model_Questoes extends Model
+class Model_Alternativa extends Model
 {
     use HasFactory;
 
-    protected $table = 'TB_DISCIPLINAS';
+    protected $table = 'TB_ALTERNATIVA';
 
     protected $fillable = [
         'pk_id',
