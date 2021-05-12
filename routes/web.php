@@ -42,15 +42,14 @@ Route::post('/painel/criar/conteudo', [Controller_Painel::class, 'CriarConteudo'
 name('CriarConteudo');
 
 /* Rota para criar questão para o assunto da disciplina */
-Route::get('/painel/criar/questao',[Controller_Painel::class, 'CriarQuestoes'])->
-name('questao');
-
-/* Rota para criar questão para o assunto da disciplina */
 Route::post('/painel/criar/questao',[Controller_Painel::class, 'CriarQuestoes'])->
 name('salvarQuestao');
 
+Route::get('/redirecionando/painel/criar/questao/{id}',[Controller_Painel::class, 'RedirectQuesteos'])->
+name('redirect');
+
 /* Rota para visualizar prova da disciplina */
-Route::get('/painel/visualizar/conteudo', [Controller_Painel::class, 'ViewAssunto'])->
+Route::get('/painel/visualizar/conteudo/{id}', [Controller_Painel::class, 'ViewAssunto'])->
 name('VisualizarAssunto');
 
 /* Rota para visualizar prova da disciplina */

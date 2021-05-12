@@ -14,7 +14,9 @@
             </div>
             <div class="rolagem">
                 <div class="div-campo">
-                    <a href="{{Route('VisualizarQuestoes', 'id')}}">POO</a>
+                    @foreach ($var_id as $datas )
+                    <a href="{{Route('VisualizarQuestoes', trim($datas->pk_id))}}">{{trim($datas->assunto)}}</a>
+                    @endforeach
                 </div>
             </div>
         </article>

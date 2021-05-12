@@ -15,8 +15,10 @@ class Controller_ConsumirQuesteos extends Controller
     public function Disciplina(){
 
        $disc = Model_Disciplina::all();
-        return Resource_Disciplina::collection($disc);
+
+      return Resource_Disciplina::collection($disc);
     }
+
 
    public function Assunto($id){
 

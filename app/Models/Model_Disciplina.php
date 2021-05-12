@@ -13,7 +13,7 @@ class Model_Disciplina extends Model
 
     protected $fillable = [
         'pk_id',
-        'disciplina',
+        'disciplina'
     ];
 
    /*  protected $hidden = [

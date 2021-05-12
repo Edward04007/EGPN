@@ -15,7 +15,7 @@ class Model_Assunto extends Model
     protected $fillable = [
         'pk_id',
         'fk_disciplina',
-        'assunto',
+        'assunto'
     ];
 
    /* protected $hidden = [

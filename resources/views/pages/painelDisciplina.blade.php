@@ -29,22 +29,28 @@
                     <p class="CP">Criar prova</p>
                 </div>
                 <div class="div-campo">
-                    <a href="{{Route('VisualizarAssunto')}}">Visualizar prova</a>
+                    @foreach ( $disc as $discs )
+                    <a href="{{Route('VisualizarAssunto', trim($discs->pk_id))}}">Visualizar prova</a>
+                    @endforeach
                 </div>
             </div>
             <a href="{{Route('inicio')}}" class="fas fa-chevron-circle-left back"><span>Voltar</span></a>
         </article>
         <div class="pop-up create">
+            @foreach ( $disc as $discs )
             <form id="form" method="POST" action="{{Route('CriarConteudo')}}">
                 <span class="fas fa-times-circle close"></span>
                 @csrf
                 <legend id="legend">Assunto da prova</legend>
-                <input type="text" name="" placeholder="Exemplo: Primeria Guerra Mundial">
+                <input type="hidden" name="id" value="{{trim($discs->pk_id)}}">
+                <input type="text" name="assunto" placeholder="Exemplo: Primeria Guerra Mundial">
                 <button type="submit">Adicionar</button>
             </form>
+            @endforeach
         </div>
         <div class="pop-up delete">
-            <form method="POST" action="{{Route('deletarDisciplina', 'id')}}">
+            @foreach ( $disc as $discs )
+            <form method="POST" action="{{Route('deletarDisciplina', trim($discs->pk_id))}}">
                 @method('delete')
                 @csrf
                 <legend>Apagar Laboratório Web?</legend>
@@ -53,6 +59,7 @@
                     <button type="submit">Sim!</button>
                 </div>
             </form>
+            @endforeach
         </div>
     </section>
 @endsection
