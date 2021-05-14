@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  line-height: 1;
+  list-style: none;
+  box-shadow: 0 0 0;
+  font-size: 1.4rem;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* ::-webkit-scrollbar-track-piece {
+    background-color: #35b2f5;
+}
+::-webkit-scrollbar{
+    width: 0.2em;
+    height: 0.2em;
+}
+::-webkit-scrollbar-thumb {
+   border-radius: 0.2em;
+    background-color:  #0F96E1;
+} */
+.root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: var(--whiteDark);
+}
+
+/* Cores */
+/* Fontes */
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form form {
+  width: 32%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  border-radius: 0.7em;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #04ADBF;
+  box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13), -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+}
+.form legend {
+  color: #FFFFFF;
+  cursor: default;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  font-family: "Alfa Slab One", cursive;
+}
+.form input {
+  width: 80%;
+  height: 1.7em;
+  padding-left: 0.5em;
+  font-size: 1rem;
+  color: #021526;
+  margin-bottom: 0.5em;
+  border-radius: 0.7em;
+  font-family: "Roboto", sans-serif;
+  background-color: #F3F3F3;
+}
+.form input:focus {
+  border: solid 3px #58ff74;
+}
+.form input::-moz-placeholder {
+  padding-left: 0.3em;
+  font-family: "Roboto", sans-serif;
+}
+.form input:-ms-input-placeholder {
+  padding-left: 0.3em;
+  font-family: "Roboto", sans-serif;
+}
+.form input::placeholder {
+  padding-left: 0.3em;
+  font-family: "Roboto", sans-serif;
+}
+.form button {
+  width: 5em;
+  height: 2em;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: bolder;
+  border-radius: 0.7em;
+  font-family: "Roboto", sans-serif;
+  background-color: #58ff74;
+  text-shadow: -6px 9px 16px -4px rgba(34, 35, 38, 0.31);
+}
+.form button:hover {
+  box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13), -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+}
+
+.erros {
+  width: 100%;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.erros span {
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+}

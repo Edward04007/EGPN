@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Model_Disciplina;
 use App\Models\Model_Usuario;
+use App\Models\Model_Disciplina;
+use App\Http\Requests\CheckFormDisciplina;
+use App\Http\Requests\CheckFormProfessor;
+
 class Controller_Inicio extends Controller
 {
     public function inicio(){
@@ -15,27 +17,29 @@ class Controller_Inicio extends Controller
         return view('pages/inicio', compact('disc','prof'));
     }
 
-    public function Adicionar(Request $request){
+    public function Adicionar_Professor(CheckFormProfessor $request){
 
-        if($request->disc){
-            $disc = Model_Disciplina::
-            create([
-                'disciplina' => trim($request->disc)
-                ]);
-            return redirect()->route('inicio');
-        }else{
+        $password = hash('sha256', trim($request->password));
 
-            $password = hash('sha256', trim($request->userSenha));
+        Model_Usuario::
+        create([
+            'nome_usuario' => trim($request->username),
+            'foto_usuario'=> trim($request->userFoto),
+            'senha_usuario'=> $password,
+            'fk_funcao'=> (int) '2'
+            ]);
 
-            $prof = Model_Usuario::
-            create([
-                'nome_usuario' => trim($request->userProf),
-                'foto_usuario'=> trim($request->userFoto),
-                'senha_usuario'=> $password,
-                'fk_funcao'=> (int) '2'
-                ]);
-            return redirect()->route('inicio');
-        }
+        return redirect()->route('inicio');
 
    }
+
+   public function Adicionar_disciplina(CheckFormDisciplina $request){
+
+    Model_Disciplina::
+    create([
+        'disciplina' => trim($request->disc)
+        ]);
+
+    return redirect()->route('inicio');
+}
 }

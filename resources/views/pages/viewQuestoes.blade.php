@@ -1,6 +1,6 @@
 @extends("template/main")
 @push("css")
-<link rel="stylesheet" href="{{mix('css/criarQuestoes.css')}}">
+<link rel="stylesheet" href="{{mix('css/criarQuestoes.scss.css')}}">
 @endpush
 @section('content')
     <section class="campo-painel">

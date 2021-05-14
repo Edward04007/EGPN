@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  line-height: 1;
+  list-style: none;
+  box-shadow: 0 0 0;
+  font-size: 1.4rem;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* ::-webkit-scrollbar-track-piece {
+    background-color: #35b2f5;
+}
+::-webkit-scrollbar{
+    width: 0.2em;
+    height: 0.2em;
+}
+::-webkit-scrollbar-thumb {
+   border-radius: 0.2em;
+    background-color:  #0F96E1;
+} */
+.root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: var(--whiteDark);
+}
+
+/* Cores */
+/* Fontes */
+.campo-feed {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  padding: 0.5em;
+  align-items: center;
+  justify-content: space-around;
+}
+.campo-feed article {
+  width: 45%;
+  height: 65%;
+  display: flex;
+  padding: 0.5em;
+  border-radius: 0.7em;
+  flex-direction: column;
+  background-color: #04ADBF;
+  box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13), -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+}
+.campo-feed article .rolagem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  padding-top: 3em;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.campo-feed article .aviso {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+}
+.campo-feed article .rolagem::-webkit-scrollbar-track-piece {
+  background-color: #04ADBF;
+}
+.campo-feed article .rolagem::-webkit-scrollbar {
+  width: 0.2em;
+  height: 0.2em;
+}
+.campo-feed article .rolagem::-webkit-scrollbar-thumb {
+  border-radius: 0.2em;
+  background-color: #6CC1C1;
+}
+
+.div-titulo {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.div-titulo p {
+  color: #FFFFFF;
+  cursor: default;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  font-family: "Roboto", sans-serif;
+}
+.div-titulo span {
+  right: 0;
+  color: #EFEBEB;
+  cursor: pointer;
+  font-size: 0.8em;
+  position: absolute;
+}
+
+.div-campo {
+  width: 15em;
+  height: 12%;
+  display: flex;
+  margin: 0.2em;
+  padding: 0.5em;
+  align-items: center;
+  border-radius: 0.4em;
+  justify-content: center;
+  background-color: #6CC1C1;
+}
+.div-campo a {
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-style: normal;
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+}
+
+.pop-up {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(36, 35, 35, 0.26);
+}
+.pop-up form {
+  width: 40%;
+  height: 40%;
+  display: flex;
+  padding: 0.5em;
+  position: relative;
+  align-items: center;
+  border-radius: 0.7em;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #6CC1C1;
+  box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13), -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+}
+.pop-up form span {
+  top: 3%;
+  right: 3%;
+  color: #ffa4a4;
+  font-size: 1rem;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 0.7em;
+}
+.pop-up form span:hover {
+  box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13), -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+}
+.pop-up form legend {
+  color: #FFFFFF;
+  cursor: default;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  white-space: nowrap;
+  font-family: "Alfa Slab One", cursive;
+}
+.pop-up form input {
+  width: 80%;
+  height: 1.7em;
+  padding: 0.5em;
+  font-size: 1rem;
+  color: #021526;
+  margin-bottom: 0.5em;
+  border-radius: 0.7em;
+  font-family: "Roboto", sans-serif;
+  background-color: #F3F3F3;
+}
+.pop-up form input:focus {
+  border: solid 3px #58ff74;
+}
+.pop-up form button {
+  width: 5em;
+  height: 2em;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 0.7em;
+  font-family: "Roboto", sans-serif;
+  background-color: #58ff74;
+  text-shadow: -6px 9px 16px -4px rgba(34, 35, 38, 0.31);
+}
+.pop-up form button:hover {
+  box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13), -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+}
+
+.mostrar {
+  display: flex;
+}
+
+.erros {
+  width: 100%;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.erros span {
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+}

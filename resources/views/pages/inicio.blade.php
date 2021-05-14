@@ -1,6 +1,6 @@
 @extends("template/main")
 @push("css")
-<link rel="stylesheet" href="{{mix('css/feed.css')}}">
+<link rel="stylesheet" href="{{mix('css/feed.scss.css')}}">
 @endpush
 @push("js")
 <script src="{{mix('js/pop-up.js')}}" defer></script>
@@ -18,7 +18,7 @@
                         <a href="{{Route('painelDisciplina', trim($discs->pk_id))}}">{{trim($discs->disciplina)}}</a>
                     </div>
                 @empty
-                    <p>Nenhuma disciplina cadastrada</p>
+                    <p class="aviso">Nenhuma disciplina cadastrada</p>
                 @endforelse
             </div>
         </article>
@@ -33,20 +33,36 @@
                         <a href="{{Route('painelProfessor', trim($profs->pk_id))}}">{{trim($profs->nome_usuario)}}</a>
                     </div>
                 @empty
-                    <p>Nenhum professor(a) cadastrado</p>
+                    <p class="aviso">Nenhum professor(a) cadastrado</p>
                 @endforelse
                 </div>
             </article>
-            <div class="pop-up">
-                <form id="form" method="POST" action="{{Route('Adicionar')}}">
+            <div class="pop-up FormProf">
+                <form method="POST" action="{{Route('Adicionar_professor')}}">
                     <span class="fas fa-times-circle close"></span>
-                    <legend id="legend"></legend>
+                    <legend>Adicionar Professor</legend>
                     @csrf
-                    <input type="url" id="hidden0" name="userFoto" placeholder="Link da imagem">
-                    <input type="text" id="input" name="" placeholder="">
-                    <input type="password" id="hidden1" name="userSenha" placeholder="Senha">
+                    <input type="url" name="userFoto" placeholder="Link da imagem">
+                    <input type="text" name="username" placeholder="Nome do professor(a)">
+                    <input type="password" name="password" placeholder="Senha">
                     <button type="submit">Adicionar</button>
                 </form>
+            </div>
+            <div class="pop-up FormDisc">
+                <form method="POST" action="{{Route('Adicionar_disciplina')}}">
+                    <span class="fas fa-times-circle close1"></span>
+                    <legend >Adicionar Disciplina</legend>
+                    @csrf
+                    <input type="text" name="disc" placeholder="Disciplina">
+                    <button type="submit">Adicionar</button>
+                </form>
+                <div class="erros">
+                    @if($errors->any())
+                        @foreach ($errors->all() as $error)
+                        <span>{{$error}}</span>
+                        @endforeach
+                    @endif
+                </div>
             </div>
     </section>
 @endsection

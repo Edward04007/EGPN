@@ -2,9 +2,9 @@
     "/js/pop-up.js": "/js/pop-up.js",
     "/js/form-edite.js": "/js/form-edite.js",
     "/js/form-edite2.js": "/js/form-edite2.js",
-    "/css/index.css": "/css/index.css",
-    "/css/feed.css": "/css/feed.css",
-    "/css/template.css": "/css/template.css",
-    "/css/painel.css": "/css/painel.css",
-    "/css/criarQuestoes.css": "/css/criarQuestoes.css"
+    "/css/criarQuestoes.scss.css": "/css/criarQuestoes.scss.css",
+    "/css/painel.scss.css": "/css/painel.scss.css",
+    "/css/template.scss.css": "/css/template.scss.css",
+    "/css/feed.scss.css": "/css/feed.scss.css",
+    "/css/index.scss.css": "/css/index.scss.css"
 }

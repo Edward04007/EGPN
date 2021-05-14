@@ -18,9 +18,12 @@ Route::middleware('session')->group(function(){
 /* Rota para o inicio */
 Route::get("/inicio",[Controller_Inicio::class, 'inicio'])->
 name('inicio');
+/* Rota para adicionar professor */
+Route::post('/inicio/criar/professor', [Controller_Inicio::class, 'Adicionar_Professor'])->
+name('Adicionar_professor');
 /* Rota para adicionar disciplina */
-Route::post('/inicio/criar/disciplina', [Controller_Inicio::class, 'Adicionar'])->
-name('Adicionar');
+Route::post('/inicio/criar/disciplina', [Controller_Inicio::class, 'Adicionar_disciplina'])->
+name('Adicionar_disciplina');
 
 
 
@@ -63,15 +66,19 @@ name('VisualizarQuestoes');
 Route::get("/painel/professor/{id}",[Controller_Painel::class, 'PainelProfessor'])->
 name('painelProfessor');
 
+/* Rota para atualizar foto */
 Route::put('/painel/atualizar/foto/{id}', [Controller_Painel::class, 'AtualizarFoto'])->
 name('AtualizarFoto');
 
+/* Rota para atualizar nome */
 Route::put('/painel/atualizar/nome/{id}', [Controller_Painel::class, 'RenomearProfessor'])->
 name('RenomearProfessor');
 
-Route::put('/painel/atualizar/senhar/{id}', [Controller_Painel::class, 'AtualizarSenha'])->
+/* Rota para atualizar senha */
+Route::put('/painel/atualizar/senha/{id}', [Controller_Painel::class, 'AtualizarSenha'])->
 name('AtualizarSenha');
 
+/* Rota para deletar professor  */
 Route::delete('/painel/deletar/professor/{id}', [Controller_Painel::class, 'DeletarProfessor'])->
 name('deletarProfessor');
 });

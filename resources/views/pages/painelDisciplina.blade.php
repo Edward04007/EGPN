@@ -1,6 +1,6 @@
 @extends("template/main")
 @push("css")
-<link rel="stylesheet" href="{{mix('css/painel.css')}}">
+<link rel="stylesheet" href="{{mix('css/painel.scss.css')}}">
 @endpush
 @push("js")
 <script src="{{mix('js/form-edite.js')}}" defer></script>

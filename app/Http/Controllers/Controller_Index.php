@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Model_Usuario;
+use App\Http\Requests\CheckFormLogin;
 
 class Controller_Index extends Controller
 {
@@ -18,24 +18,14 @@ class Controller_Index extends Controller
 
     }
 
-    public function logar(Request $request){
+    public function logar(CheckFormLogin $request){
 
         $User = trim($request->username);
         $password = hash('sha256', trim($request->password));
-        $InforUser = Model_Usuario::
-            where('nome_usuario', $User)->first();
+        $InforUser = Model_Usuario::where('nome_usuario', $User)->first();
 
-       if(trim($InforUser->nome_usuario) == $User){
-
-            $InforUser = Model_Usuario::
-                where('senha_usuario', $password)->first();
-        if($InforUser->senha_usuario == $password){
-
-            $InforUser = Model_Usuario::
-                where('senha_usuario', $password)->
-                where('nome_usuario', $User)->first();
-
-            if(trim($InforUser->nome_usuario) == $User and $InforUser->senha_usuario == $password ){
+        if(trim($InforUser->nome_usuario)){
+            if($InforUser->senha_usuario == $password){
 
                 $request->session()->put('id', trim($InforUser->pk_id));
                 $request->session()->put('foto', trim($InforUser->foto_usuario));
@@ -44,16 +34,12 @@ class Controller_Index extends Controller
                 return redirect()->route('inicio');
             }else{
 
-                return back();
+                return redirect()->route('entrar');
             }
         }else{
 
-            return back();
+            return redirect()->route('entrar');
         }
-       }else{
-
-            return back();
-       }
     }
 
     public function deslogar(){

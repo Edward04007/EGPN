@@ -1,24 +1,24 @@
 const mix = require('laravel-mix');
 
- mix.styles(
-    'resources/css/main1.css'
-    ,'public/css/index.css',
+ mix.sass(
+    'resources/sass/main1.scss'
+    ,'public/css/index.scss',
 )
-.styles(
-    'resources/css/main2.css',
-    'public/css/feed.css',
+.sass(
+    'resources/sass/main2.scss',
+    'public/css/feed.scss',
 )
-.styles(
-    'resources/css/main3.css',
-    'public/css/template.css'
+.sass(
+    'resources/sass/main3.scss',
+    'public/css/template.scss'
 )
-.styles(
-    'resources/css/main4.css',
-    'public/css/painel.css'
+.sass(
+    'resources/sass/main4.scss',
+    'public/css/painel.scss'
 )
-.styles(
-    'resources/css/main5.css',
-    'public/css/criarQuestoes.css'
+.sass(
+    'resources/sass/main5.scss',
+    'public/css/criarQuestoes.scss'
 )
 .js(
     'resources/js/pop-up.js',

@@ -7,11 +7,10 @@
     align-items: center;
     justify-content: space-around;
     article{
-        width: 40%;
-        height: 60%;
+        width: 45%;
+        height: 65%;
         display: flex;
         padding: 0.5em;
-        overflow: auto;
         border-radius: 0.7em;
         flex-direction: column;
         background-color: $blue;
@@ -21,10 +20,16 @@
             height: 100%;
             display: flex;
             overflow: auto;
-            padding-top: 2em;
+            padding-top: 3em;
             align-items: center;
             flex-direction: column;
             justify-content: center;
+        }
+        .aviso{
+            color: $white;
+            font-size: 1.2rem;
+            font-weight: lighter;
+            font-family: $Roboto;
         }
         .rolagem::-webkit-scrollbar-track-piece {
             background-color: $blue;
@@ -158,4 +163,17 @@
 
 .mostrar{
     display: flex;
+}
+.erros{
+    width: 100%;
+    display: flex;
+    padding: 0.8em;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    span{
+        color: $white;
+        font-size: 0.8rem;
+        font-family: $Roboto;
+    }
 }
