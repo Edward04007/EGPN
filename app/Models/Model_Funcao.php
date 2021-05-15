@@ -16,10 +16,6 @@ class Model_Funcao extends Model
         'funcao',
     ];
 
-   /* protected $hidden = [
-        '',
-    ]; */
-
     protected $primaryKey = 'pk_id';
     public $timestamps = false;
 }

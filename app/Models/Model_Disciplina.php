@@ -16,10 +16,6 @@ class Model_Disciplina extends Model
         'disciplina'
     ];
 
-   /*  protected $hidden = [
-        ''
-    ]; */
-
     protected $primaryKey = 'pk_id';
     public $timestamps = false;
 }

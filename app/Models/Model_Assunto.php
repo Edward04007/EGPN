@@ -18,10 +18,6 @@ class Model_Assunto extends Model
         'assunto'
     ];
 
-   /* protected $hidden = [
-        '',
-    ]; */
-
     protected $primaryKey = 'pk_id';
     public $timestamps = false;
 }

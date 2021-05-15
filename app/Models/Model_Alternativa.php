@@ -23,9 +23,6 @@ class Model_Alternativa extends Model
         'gabarito'
     ];
 
-   protected $hidden = [
-        'gabarito',
-    ];
 
     protected $primaryKey = 'pk_id';
     public $timestamps = false;
