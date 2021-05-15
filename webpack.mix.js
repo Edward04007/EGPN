@@ -20,9 +20,17 @@ const mix = require('laravel-mix');
     'resources/sass/main5.scss',
     'public/css/criarQuestoes.scss'
 )
+.sass(
+    'resources/sass/main6.scss',
+    'public/css/viewQuestoes.scss'
+)
 .js(
     'resources/js/pop-up.js',
     'public/js/pop-up.js'
+)
+.js(
+    'resources/js/pop-up2.js',
+    'public/js/pop-up2.js'
 )
 .js(
     'resources/js/form-edite.js',

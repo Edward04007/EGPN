@@ -1,0 +1,1 @@
+(()=>{var e=document.querySelector(".FormDisc");document.querySelector(".dis").addEventListener("click",(function(){e.classList.add("mostrar")})),document.querySelector(".close1").addEventListener("click",(function(){e.classList.remove("mostrar")}))})();

@@ -1,10 +1,12 @@
 {
     "/js/pop-up.js": "/js/pop-up.js",
+    "/js/pop-up2.js": "/js/pop-up2.js",
     "/js/form-edite.js": "/js/form-edite.js",
     "/js/form-edite2.js": "/js/form-edite2.js",
     "/css/criarQuestoes.scss.css": "/css/criarQuestoes.scss.css",
     "/css/painel.scss.css": "/css/painel.scss.css",
     "/css/template.scss.css": "/css/template.scss.css",
     "/css/feed.scss.css": "/css/feed.scss.css",
-    "/css/index.scss.css": "/css/index.scss.css"
+    "/css/index.scss.css": "/css/index.scss.css",
+    "/css/viewQuestoes.scss.css": "/css/viewQuestoes.scss.css"
 }

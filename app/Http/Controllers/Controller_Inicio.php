@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Model_Usuario;
 use App\Models\Model_Disciplina;
-use App\Http\Requests\CheckFormDisciplina;
 use App\Http\Requests\CheckFormProfessor;
+use App\Http\Requests\CheckFormDisciplina;
 
 class Controller_Inicio extends Controller
 {
     public function inicio(){
 
         $disc = Model_Disciplina::all();
-        $prof = Model_Usuario::select('pk_id','nome_usuario')->get();
+        $prof = Model_Usuario::select('pk_id','nome_usuario', 'fk_funcao')->get();
 
         return view('pages/inicio', compact('disc','prof'));
     }
@@ -30,16 +30,15 @@ class Controller_Inicio extends Controller
             ]);
 
         return redirect()->route('inicio');
-
    }
 
    public function Adicionar_disciplina(CheckFormDisciplina $request){
 
-    Model_Disciplina::
-    create([
-        'disciplina' => trim($request->disc)
-        ]);
+        Model_Disciplina::
+        create([
+            'disciplina' => trim($request->disc)
+            ]);
 
-    return redirect()->route('inicio');
-}
+        return redirect()->route('inicio');
+    }
 }

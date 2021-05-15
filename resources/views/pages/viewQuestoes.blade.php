@@ -1,6 +1,6 @@
 @extends("template/main")
 @push("css")
-<link rel="stylesheet" href="{{mix('css/criarQuestoes.scss.css')}}">
+<link rel="stylesheet" href="{{mix('css/viewQuestoes.scss.css')}}">
 @endpush
 @section('content')
     <section class="campo-painel">
@@ -10,18 +10,11 @@
             </div>
             <div class="rolagem">
                 <div class="div-campo">
-                    <div class="links">
-                        @if ($var_id->previousPageUrl() != null)
-                        <a href="{{$var_id->previousPageUrl()}}" class="fas fa-angle-left font"></a>
-                        @endif
-                        @if ($var_id->nextPageUrl() != null)
-                        <a href="{{$var_id->nextPageUrl()}}" class="fas fa-angle-right font"></a>
-                        @endif
-                    </div>
+
                     @foreach ($var_id as $date )
-                    <form method="POST" {{-- action="{{Route('salvarQuestao', 'id')}}" --}}>
+                    <form {{--method="POST"  action="{{Route('salvarQuestao', 'id')}}" --}}>
                         @csrf
-                        <input class="textarea" value="{{$date->questao}}" name="questao"></input>
+                        <textarea class="textarea" name="questao">{{$date->questao}}</textarea>
                         <input type="text" value="{{$date->alternativa_a}}" name="alternativa_a">
                         <input type="text" value="{{$date->alternativa_b}}" name="alternativa_b">
                         <input type="text" value="{{$date->alternativa_c}}" name="alternativa_c">
@@ -30,10 +23,19 @@
                         <input type="text" value="{{$date->gabarito}}" name="gabarito">
                         <input type="hidden" name="fk_assunto" value="{{$date->pk_id}}">
                         <input type="hidden" name="fk_dis" value="{{$date->fk_disciplina}}">
-                        <div>
-                            <a href="{{Route('painelDisciplina', $date->fk_disciplina)}}" class="fas
-                            fa-chevron-circle-left"><span>Voltar</span></a>
-                            {{-- <button class="button" type="submit">Salvar</button> --}}
+                        <div class="div-buttons">
+                            <div>
+                                <a href="{{Route('painelDisciplina', $date->fk_disciplina)}}" class="painel">Painel</a>
+                               {{--  <button class="button" type="submit">Salvar</button> --}}
+                            </div>
+                            <div class="div-page">
+                                @if ($var_id->previousPageUrl() != null)
+                                <a href="{{$var_id->previousPageUrl()}}">Voltar</a>
+                                @endif
+                                @if ($var_id->nextPageUrl() != null)
+                                <a href="{{$var_id->nextPageUrl()}}">Próximo</a>
+                                @endif
+                            </div>
                         </div>
                     </form>
                     @endforeach

@@ -24,12 +24,13 @@ class Controller_Index extends Controller
         $password = hash('sha256', trim($request->password));
         $InforUser = Model_Usuario::where('nome_usuario', $User)->first();
 
-        if(trim($InforUser->nome_usuario)){
+        if($InforUser){
             if($InforUser->senha_usuario == $password){
 
                 $request->session()->put('id', trim($InforUser->pk_id));
                 $request->session()->put('foto', trim($InforUser->foto_usuario));
                 $request->session()->put('UsuarioLogado', trim($InforUser->nome_usuario));
+                $request->session()->put('fk', trim($InforUser->fk_funcao));
 
                 return redirect()->route('inicio');
             }else{

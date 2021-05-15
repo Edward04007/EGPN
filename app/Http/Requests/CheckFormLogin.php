@@ -25,16 +25,16 @@ class CheckFormLogin extends FormRequest
     {
         return [
             'username' => 'required|max:40',
-            'password' => 'required|min:8|max:16'
+            'password' => 'required|max:16'
         ];
     }
 
     public function messages()
     {
         return[
-            'username.required'=> 'É necessário digitar o nome de usuário!',
-            'password.required'=> 'É necessário digitar a senha!',
-            'username.max'=> ' Usuário não encontrado!',
+            'username.required'=> 'Preencha o campo de usuário!',
+            'password.required'=> 'Preencha o campo de senha!',
+            'username.max'=> 'Usuário não encontrado!',
             'password.max'=> 'Senha muito longa!',
             'password.min'=> 'Senha muito curta!'
         ];

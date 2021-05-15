@@ -76,6 +76,15 @@
     border-radius: 0.4em;
     justify-content: center;
     background-color: $ligthBlue;
+    .prof{
+        color: $white;
+        cursor: default;
+        font-size: 1.2rem;
+        font-style: normal;
+        text-align: center;
+        white-space: nowrap;
+        font-family: $Roboto;
+    }
     a{
         color: $white;
         cursor: pointer;
@@ -96,8 +105,8 @@
     justify-content: center;
     background-color: rgba(36, 35, 35, 0.26);
     form{
-        width: 40%;
-        height: 40%;
+        width: 45%;
+        height: 45%;
         display: flex;
         padding: 0.5em;
         position: relative;
@@ -107,7 +116,7 @@
         justify-content: center;
         background-color: $ligthBlue;
         box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
-        span{
+        .fa-times-circle{
             top: 3%;
             right: 3%;
             color: $red;
@@ -116,7 +125,7 @@
             position: absolute;
             border-radius: 0.7em;
         }
-        span:hover{
+        .fa-times-circle:hover{
             box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
         }
         legend{
