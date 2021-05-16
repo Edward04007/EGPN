@@ -38,7 +38,7 @@
                 <div class="rolagem">
                     @forelse ( $prof as $profs )
                     <div class="div-campo">
-                        @if (session('fk') != $profs->fk_funcao)
+                        @if (session('fk') == 1)
                         <a href="{{Route('painelProfessor', trim($profs->pk_id))}}">{{trim($profs->nome_usuario)}}</a>
                         @else
                         <p class="prof">{{trim($profs->nome_usuario)}}</p>

@@ -40,8 +40,8 @@
                 <span>EGPN</span>
                 @if(session('UsuarioLogado') == true)
                     <figure>
-                        <a href="{{Route('deslogar')}}"><img src="{{session('foto')}}"/></a>
-                        <figcaption>{{session('UsuarioLogado')}}</figcaption>
+                        <a class="photo" href="{{Route('deslogar')}}"><img src="{{session('foto')}}"/></a>
+                        <a class="user" href="{{Route('painelProfessor', trim(session('id')))}}">{{session('UsuarioLogado')}}</a>
                     </figure>
                 @else
                     <p>Excelente Gerenciador de Provas e Notas</p>

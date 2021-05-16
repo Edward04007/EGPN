@@ -12,3 +12,5 @@ Route::get("a/{id}", [Controller_ConsumirQuesteos::class, 'Assunto']);
 /* Rotas para listar todas as questões */
 Route::get("q/{id}", [Controller_ConsumirQuesteos::class, 'Questeos']);
 
+/* Rotas para listar todas as questões */
+Route::get("g/{id}", [Controller_ConsumirQuesteos::class, 'Gabarito']);

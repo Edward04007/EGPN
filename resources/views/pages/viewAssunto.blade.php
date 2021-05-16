@@ -10,7 +10,6 @@
         <article >
             <div class="div-titulo">
                 <p>Conteúdo da prova</p>
-                <span class="fas fa-ellipsis-v prof"></span>
             </div>
             <div class="rolagem">
                 <div class="div-campo">
