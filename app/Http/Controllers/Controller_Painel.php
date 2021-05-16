@@ -70,8 +70,8 @@ class Controller_Painel extends Controller
             'gabarito' => trim($request->gabarito),
             'questao' => trim($request->questao)
         ]);
-    
-        return redirect()->route('redirect', $request->fk_dis);
+
+        dd(redirect()->route('redirect', $request->fk_assunto));
 
     }
 

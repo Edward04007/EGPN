@@ -32,6 +32,5 @@ class Controller_ConsumirQuesteos extends Controller
     return Model_Alternativa::first()->
         where('fk_assunto', $id)->
         paginate(1);
-
     }
 }
