@@ -20,7 +20,6 @@
                         <input type="text" name="alternativa_e">
                         <input type="text" placeholder="Resposta" name="gabarito">
                         @foreach ( $var_id as $fk )
-                      
                         <input type="hidden" name="fk_assunto" value="{{$fk->pk_id}}">
                         <input type="hidden" name="fk_dis" value="{{$fk->fk_disciplina}}">
                         <div>

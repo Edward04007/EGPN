@@ -71,8 +71,7 @@ class Controller_Painel extends Controller
             'questao' => trim($request->questao)
         ]);
 
-        redirect()->route('redirect', $request->fk_assunto);
-
+        return redirect()->route('redirect', $request->fk_assunto);
     }
 
     public function ViewAssunto($id){
