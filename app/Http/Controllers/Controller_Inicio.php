@@ -12,7 +12,10 @@ class Controller_Inicio extends Controller
     public function inicio(){
 
         $disc = Model_Disciplina::all();
-        $prof = Model_Usuario::select('pk_id','nome_usuario', 'fk_funcao')->get();
+        $prof = Model_Usuario::select(
+            'pk_id',
+            'nome_usuario',
+            'fk_funcao')->get();
 
         return view('pages/inicio', compact('disc','prof'));
     }

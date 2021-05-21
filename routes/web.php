@@ -8,10 +8,17 @@ use App\Http\Controllers\Controller_Painel;
 /* Rotas para a página inicial */
 Route::get("/",[Controller_Index::class, 'index'])->
 name('entrar');
+
+/* Rota para autenticar */
 Route::post("/autenticar/usuario",[Controller_Index::class, 'logar'])->
 name('logar');
+
+/* Rota para sair */
 Route::get("/sair",[Controller_Index::class, 'deslogar'])->
 name('deslogar');
+
+
+
 
 Route::middleware('session')->group(function(){
 
@@ -48,6 +55,7 @@ name('CriarConteudo');
 Route::post('/painel/criar/questao',[Controller_Painel::class, 'CriarQuestoes'])->
 name('salvarQuestao');
 
+/* Rota para redirecionamento */
 Route::get('/redirecionando/painel/criar/questao/{id}',[Controller_Painel::class, 'RedirectQuesteos'])->
 name('redirect');
 

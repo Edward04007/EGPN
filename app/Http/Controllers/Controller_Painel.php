@@ -90,7 +90,10 @@ class Controller_Painel extends Controller
     public function ViewQuestoes($id){
 
         $var_id = Model_Alternativa::
-        join('TB_ASSUNTO','TB_ASSUNTO.pk_id','TB_ALTERNATIVA.fk_assunto')->
+        join(
+            'TB_ASSUNTO',
+            'TB_ASSUNTO.pk_id',
+            'TB_ALTERNATIVA.fk_assunto')->
         select(
             'TB_ALTERNATIVA.pk_id',
             'TB_ALTERNATIVA.fk_assunto',
@@ -111,7 +114,10 @@ class Controller_Painel extends Controller
 
     public function PainelProfessor($id){
         $prof = Model_Usuario::
-        select('nome_usuario','pk_id','foto_usuario')->
+        select(
+            'nome_usuario',
+            'pk_id',
+            'foto_usuario')->
         where('pk_id', $id)->
         get();
 

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Model_Assunto;
-use App\Models\Model_Disciplina;
 use App\Models\Model_Alternativa;
 use App\Http\Resources\Resource_Assunto;
 use App\Http\Resources\Resource_Gabarito;
@@ -14,7 +13,14 @@ class Controller_ConsumirQuesteos extends Controller
 
     public function Disciplina(){
 
-       $disc = Model_Disciplina::all();
+       $disc = Model_Assunto::select(
+           'disciplina',
+           'TB_DISCIPLINAS.pk_id')->
+       join(
+           'TB_DISCIPLINAS',
+           'TB_ASSUNTO.fk_disciplina',
+           'TB_DISCIPLINAS.pk_id')->
+       get();
 
       return Resource_Disciplina::collection($disc);
     }
