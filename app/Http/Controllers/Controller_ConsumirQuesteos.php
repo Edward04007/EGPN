@@ -39,7 +39,7 @@ class Controller_ConsumirQuesteos extends Controller
         paginate(1);
     }
 
-    public function Gabarito($id){e
+    public function Gabarito($id){
 
         $gaba = Model_Alternativa::select('gabarito')->
             where('fk_assunto', $id)->
