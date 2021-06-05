@@ -17,6 +17,7 @@ class Resource_Gabarito extends JsonResource
         /* return parent::toArray($request); */
 
         return [
+            'pk_id' => trim($this->pk_id),
             'gabarito' => trim($this->gabarito),
           ];
     }

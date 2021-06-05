@@ -1,10 +1,10 @@
-.campo-painel{
+.campo-painel {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    article{
+    article {
         width: 80%;
         height: 80%;
         display: flex;
@@ -14,33 +14,33 @@
         border-radius: 0.7em;
         flex-direction: column;
         background-color: $blue;
-        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
-        -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+        box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+            -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
 
-        .back{
-                left: 2%;
-                bottom: 3%;
-                width: 5em;
-                height: 2em;
-                color: $white;
-                display: flex;
+        .back {
+            left: 2%;
+            bottom: 3%;
+            width: 5em;
+            height: 2em;
+            color: $white;
+            display: flex;
+            font-size: 1rem;
+            cursor: pointer;
+            position: absolute;
+            align-items: center;
+            border-radius: 0.7em;
+            background-color: $red;
+            justify-content: center;
+            span {
                 font-size: 1rem;
-                cursor: pointer;
-                position: absolute;
-                align-items: center;
-                border-radius: 0.7em;
-                background-color: $red;
-                justify-content: center;
-                span{
-                    font-size: 1rem;
-                    padding-left: 0.3em;
-                    font-weight: bolder;
-                    font-family: $Roboto;
-                }
+                padding-left: 0.3em;
+                font-weight: bolder;
+                font-family: $Roboto;
+            }
         }
     }
 }
-.rolagem{
+.rolagem {
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -52,7 +52,7 @@
 .rolagem::-webkit-scrollbar-track-piece {
     background-color: $blue;
 }
-.rolagem::-webkit-scrollbar{
+.rolagem::-webkit-scrollbar {
     width: 0.2em;
     height: 0.2em;
 }
@@ -60,21 +60,21 @@
     border-radius: 0.2em;
     background-color: $ligthBlue;
 }
-.div-titulo{
+.div-titulo {
     width: 100%;
     height: 10%;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    p{
+    p {
         color: $white;
         cursor: default;
         font-size: 1.6rem;
         font-weight: bolder;
         font-family: $Roboto;
     }
-    span{
+    span {
         right: 0;
         color: $grey;
         cursor: pointer;
@@ -82,7 +82,7 @@
         position: absolute;
     }
 }
-.div-campo{
+.div-campo {
     width: 20em;
     height: 12%;
     display: flex;
@@ -91,11 +91,11 @@
     border-radius: 0.4em;
     justify-content: center;
     background-color: $ligthBlue;
-    form{
+    form {
         width: 100%;
         height: 100%;
         display: flex;
-        input{
+        input {
             width: 100%;
             height: 100%;
             color: $white;
@@ -107,10 +107,10 @@
             border-radius: 0.4em;
             background-color: $ligthBlue;
         }
-        input:focus{
+        input:focus {
             width: 75%;
         }
-        input::placeholder{
+        input::placeholder {
             color: $white;
             font-size: 1.6rem;
             font-style: normal;
@@ -119,7 +119,8 @@
             font-family: $Roboto;
         }
     }
-     a, p{
+    a,
+    p {
         color: $white;
         cursor: pointer;
         font-size: 1.6rem;
@@ -129,7 +130,9 @@
         font-family: $Roboto;
     }
 }
-.button, .button2, .button3{
+.button,
+.button2,
+.button3 {
     width: 25%;
     height: 100%;
     display: none;
@@ -142,10 +145,10 @@
     border-top-right-radius: 0.4em;
     border-bottom-right-radius: 0.4em;
 }
-.mostrar{
+.mostrar {
     display: block;
 }
-.pop-up{
+.pop-up {
     width: 100vw;
     height: 100vh;
     display: none;
@@ -154,7 +157,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: rgba(36, 35, 35, 0.26);
-    form{
+    form {
         width: 40%;
         height: 40%;
         display: flex;
@@ -165,9 +168,9 @@
         flex-direction: column;
         justify-content: center;
         background-color: $ligthBlue;
-        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
-        -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
-        legend{
+        box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+            -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+        legend {
             color: $white;
             cursor: default;
             font-size: 1.2rem;
@@ -175,7 +178,7 @@
             white-space: nowrap;
             font-family: $Alfa-Slad-One;
         }
-        input{
+        input {
             width: 80%;
             height: 1.7em;
             padding: 0.5em;
@@ -186,18 +189,16 @@
             font-family: $Roboto;
             background-color: $WhiteGrey;
         }
-        input:focus{
+        input:focus {
             border: solid 3px $ligthBlue;
         }
-
     }
-
 }
-.mostrar-flex{
+.mostrar-flex {
     display: flex;
 }
-.create{
-    span{
+.create {
+    span {
         top: 3%;
         right: 3%;
         color: $red;
@@ -206,10 +207,11 @@
         position: absolute;
         border-radius: 0.7em;
     }
-    span:hover{
-        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+    span:hover {
+        box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+            -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
     }
-    button{
+    button {
         width: 5em;
         height: 2em;
         color: $white;
@@ -221,15 +223,16 @@
         background-color: $blue;
         text-shadow: -6px 9px 16px -4px rgba(34, 35, 38, 0.31);
     }
-    button:hover{
-        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),-6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+    button:hover {
+        box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+            -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
     }
 }
-.delete{
-    div{
+.delete {
+    div {
         display: flex;
         flex-direction: row;
-        button{
+        button {
             width: 5em;
             height: 2em;
             color: $white;
@@ -240,10 +243,11 @@
             font-family: $Roboto;
             background-color: $blue;
         }
-        button:hover{
-            box-shadow:6px 7px 5px -4px rgba(42, 42, 44, 0.13),-6px 7px 25px -5px rgba(41, 40, 40, 0.157)
+        button:hover {
+            box-shadow: 6px 7px 5px -4px rgba(42, 42, 44, 0.13),
+                -6px 7px 25px -5px rgba(41, 40, 40, 0.157);
         }
-       span{
+        span {
             width: 5em;
             height: 2em;
             display: flex;
@@ -258,8 +262,9 @@
             font-family: $Roboto;
             background-color: $red;
         }
-        span:hover{
-            box-shadow:6px 7px 5px -4px rgba(42, 42, 44, 0.13),-6px 7px 25px -5px rgba(41, 40, 40, 0.157);
+        span:hover {
+            box-shadow: 6px 7px 5px -4px rgba(42, 42, 44, 0.13),
+                -6px 7px 25px -5px rgba(41, 40, 40, 0.157);
         }
     }
 }

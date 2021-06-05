@@ -1,4 +1,4 @@
-.header{
+.header {
     top: 0px;
     width: 100%;
     height: 9%;
@@ -8,38 +8,38 @@
     align-items: center;
     background-color: $blue;
     justify-content: space-between;
-    box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
-    -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
-    span{
+    box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+        -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+    span {
         color: $white;
         cursor: default;
         font-size: 1.2rem;
         font-family: $Alfa-Slad-One;
     }
-    p{
+    p {
         color: $white;
         cursor: default;
         font-size: 1.2rem;
         font-family: $Alfa-Slad-One;
     }
-    figure{
+    figure {
         width: 35%;
         height: 100%;
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: flex-end;
-        .photo{
+        .photo {
             width: 1.5em;
             height: 1.5em;
             border-radius: 50%;
-            img{
+            img {
                 width: 1.5em;
                 height: 1.5em;
                 border-radius: 50%;
             }
         }
-        .user{
+        .user {
             color: $white;
             cursor: pointer;
             font-size: 1.2rem;

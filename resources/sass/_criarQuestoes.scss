@@ -1,10 +1,10 @@
-.campo-painel{
+.campo-painel {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    article{
+    article {
         width: 80%;
         height: 80%;
         display: flex;
@@ -13,11 +13,11 @@
         border-radius: 0.7em;
         flex-direction: column;
         background-color: $blue;
-        box-shadow:6px 7px 5px -4px rgba(34, 35, 38, 0.13),
-        -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
+        box-shadow: 6px 7px 5px -4px rgba(34, 35, 38, 0.13),
+            -6px 7px 25px -5px rgba(40, 38, 39, 0.37);
     }
 }
-.rolagem{
+.rolagem {
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -29,22 +29,22 @@
 .rolagem::-webkit-scrollbar-track-piece {
     background-color: $blue;
 }
-.rolagem::-webkit-scrollbar{
+.rolagem::-webkit-scrollbar {
     width: 0.2em;
     height: 0.2em;
 }
 .rolagem::-webkit-scrollbar-thumb {
     border-radius: 0.2em;
-    background-color: $ligthBlue ;
+    background-color: $ligthBlue;
 }
-.div-titulo{
+.div-titulo {
     width: 100%;
     height: 10%;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    p{
+    p {
         color: $white;
         cursor: default;
         font-size: 1.6rem;
@@ -52,13 +52,13 @@
         font-family: $Roboto;
     }
 }
-.div-campo{
+.div-campo {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    form{
+    form {
         width: 95%;
         height: 95%;
         display: flex;
@@ -66,7 +66,7 @@
         border-radius: 0.7em;
         flex-direction: column;
         justify-content: center;
-        textarea{
+        textarea {
             width: 80%;
             height: 20em;
             color: $white;
@@ -82,15 +82,15 @@
             border-top-right-radius: 0.7em;
             border-bottom-right-radius: 0.7em;
         }
-        textarea::-webkit-scrollbar{
+        textarea::-webkit-scrollbar {
             width: 0.2em;
             height: 0.2em;
         }
         textarea::-webkit-scrollbar-thumb {
             border-radius: 0.2em;
-            background-color: $ligthBlue ;
+            background-color: $ligthBlue;
         }
-        input{
+        input {
             width: 80%;
             color: $white;
             height: 1.7em;
@@ -101,15 +101,15 @@
             font-family: $Roboto;
             background-color: $ligthBlue;
         }
-        input::placeholder{
+        input::placeholder {
             color: $white;
         }
-        div{
+        div {
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            a{
+            a {
                 width: 5em;
                 height: 2em;
                 display: flex;
@@ -123,7 +123,7 @@
                 background-color: $red;
                 justify-content: center;
             }
-            button{
+            button {
                 width: 5em;
                 height: 2em;
                 color: $white;
