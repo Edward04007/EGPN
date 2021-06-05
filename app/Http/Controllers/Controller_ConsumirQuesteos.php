@@ -41,7 +41,7 @@ class Controller_ConsumirQuesteos extends Controller
 
     public function Gabarito($id){
 
-        $gaba = Model_Alternativa::select('gabarito')->
+        $gaba = Model_Alternativa::select('pk_id','gabarito')->
             where('fk_assunto', $id)->
             get();
         return Resource_Gabarito::collection($gaba);
